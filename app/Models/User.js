@@ -4,6 +4,14 @@ const Hash = use('Hash')
 const Model = use('Model')
 
 class User extends Model {
+  scenes () {
+    return this.hasMany('App/Models/Scene')
+  }
+
+  devices () {
+    return this.hasMany('App/Models/Device')
+  }
+
   static boot () {
     super.boot()
 
